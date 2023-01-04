@@ -1,0 +1,176 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<main>
+
+    <!-- page title area start -->
+    <section class="page__title p-relative d-flex align-items-center" data-background="assets/img/page-title/page-title-2.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="page__title-inner text-center">
+                        <h1>İletişim</h1>
+                        <div class="page__title-breadcrumb">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="/Home/Index">Anasayfa</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"> İletişim</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- page title area end -->
+    <!-- contact area start -->
+    <section class="contact__area pb-100 pt-95">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-6">
+                    <div class="contact__info">
+                        <h3>İletişim Bilgileri.</h3>
+                        <ul class="mb-55">
+                            <li class="d-flex mb-35">
+                                <div class="contact__info-icon mr-20">
+                                    <i class="fal fa-map-marker-alt"></i>
+                                </div>
+                                <div class="contact__info-content">
+                                    <h6>Adres:</h6>
+                                    <span>Çırpıcı Mah. Seyit Nizam Cad. No:62/A Zeytinburnu/İSTANBUL.</span>
+                                </div>
+                            </li>
+                            <li class="d-flex mb-35">
+                                <div class="contact__info-icon mr-20">
+                                    <i class="fal fa-envelope-open-text"></i>
+                                </div>
+                                <div class="contact__info-content">
+                                    <h6>Email:</h6>
+                                    <span><a href="" class="__cf_email__" data-cfemail="">info@atilimaluminyum.com.tr</a></span>
+                                </div>
+                            </li>
+                            <li class="d-flex mb-35">
+                                <div class="contact__info-icon mr-20">
+                                    <i class="fal fa-phone-alt"></i>
+                                </div>
+                                <div class="contact__info-content">
+                                    <h6>Telefon Numarası:</h6>
+                                    <span>+90 [ 212 ] 679 17 74</span>
+                                </div>
+                            </li>
+                            , <li class="d-flex mb-35">
+                                <div class="contact__info-icon mr-20">
+                                    <i class="fal fa-phone-alt"></i>
+                                </div>
+                                <div class="contact__info-content">
+                                    <h6>Fax Numarası:</h6>
+                                    <span>+90 [ 212 ] 546 88 83</span>
+                                </div>
+                            </li>
+                        </ul>
+                        <p>alüminyum, plastik, bant çeşitleri, sac ve galvanizli profiller, silikon - mastik - köpük....</p>
+
+                        <div class="contact__social">
+                            <ul>
+                                <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                                <li><a href="#"><i class="fas fa-share-alt"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-6">
+                    <div class="contact__form">
+                        <h3>İletişim Formu.</h3>
+                        <form action="~/assets/" id="contact-form">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="contact__input">
+                                        <label>İsim <span class="required">*</span></label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="contact__input">
+                                        <label>Email <span class="required">*</span></label>
+                                        <input type="email">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="contact__input">
+                                        <label>Konu <span class="required">*</span></label>
+                                        <input type="text">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="contact__input">
+                                        <label>Mesaj</label>
+                                        <textarea cols="30" rows="10"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="contact__submit">
+                                        <button type="submit" class="os-btn os-btn-black">Gönder</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="ajax-response"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact area end -->
+    <!-- contact map area start -->
+    <section class="contact__map">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-xl-12">
+                    <div class="contact__map-wrapper p-relative">
+                        @*<iframe src="https://maps.google.com/maps?hl=en&q=Dhaka+()&ie=UTF8&t=&z=10&iwloc=B&output=embed"></iframe>*@
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3011.029823641223!2d28.895877714557322!3d41.00272042771724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cabb0e839018e9%3A0x8d1a4161ec5b94e8!2sSeyitnizam%2C%20Seyit%20Nizam%20Cd.%2062%2FA%2C%2034015%20Zeytinburnu%2F%C4%B0stanbul!5e0!3m2!1str!2str!4v1671194200302!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- contact map area end -->
+    <!-- subscribe area start -->
+    <section class="subscribe__area pb-100">
+        <div class="container">
+            <div class="subscribe__inner subscribe__inner-2 pt-95">
+                <div class="row">
+                    <div class="col-xl-8 offset-xl-2">
+                        <div class="subscribe__content text-center">
+                            <h2>Atılım Alüminyum</h2>
+                            <p>Atılım Alüminyum olarak müşteri memnuniyeti tek hedefimiz.</p>
+                            <div class="subscribe__form">
+                                <form action="#">
+                                    <input type="email" placeholder="Mesaj.">
+                                    <button class="os-btn os-btn-2 os-btn-3">Gönder</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- subscribe area end -->
+</main>
+
+<!-- footer area start -->
+

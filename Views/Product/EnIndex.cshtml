@@ -1,0 +1,135 @@
+﻿
+@{
+    ViewData["Title"] = "EnIndex";
+    Layout = "~/Views/Shared/EnLayout.cshtml";
+}
+
+
+<div class="scroll-up" id="scroll" style="display: none;">
+    <a href="javascript:void(0);"><i class="fas fa-level-up-alt"></i></a>
+</div>
+<!-- scroll up area end -->
+<!-- search area start -->
+<section class="header__search white-bg transition-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="header__search-inner text-center">
+                    <form action="#">
+                        <div class="header__search-btn">
+                            <a href="javascript:void(0);" class="header__search-btn-close"><i class="fal fa-times"></i></a>
+                        </div>
+                        <div class="header__search-header">
+                            <h3>Search</h3>
+                        </div>
+                        <div class="header__search-categories">
+                            <ul class="search-category">
+                                <li><a href="shop.html">All Categories</a></li>
+                                <li><a href="shop.html">Accessories</a></li>
+                                <li><a href="shop.html">Chair</a></li>
+                                <li><a href="shop.html">Tablet</a></li>
+                                <li><a href="shop.html">Men</a></li>
+                                <li><a href="shop.html">Women</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="header__search-input p-relative">
+                            <input type="text" placeholder="Search for products... ">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="body-overlay transition-3"></div>
+<div class="body-overlay transition-3"></div>
+<section class="page__title p-relative d-flex align-items-center" data-background="assets/img/page-title/page-title-1.jpg">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="page__title-inner text-center">
+                    <h1>Products</h1>
+                    <div class="page__title-breadcrumb">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb justify-content-center">
+                                <li class="breadcrumb-item"><a href="/Home/EnIndex">Home</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Product</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- page title area end -->
+<!-- shop area start -->
+<section class="shop__area pt-100 pb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-md-4">
+
+                @await Component.InvokeAsync("EnCategoryComponent")
+
+            </div>
+            <div class="col-xl-9 col-lg-9 col-md-8">
+                <div class="shop__content-area">
+                   <div class="tab-content" id="pills-tabContent">
+                        <div class="tab-pane fade show active" id="pills-grid" role="tabpanel" aria-labelledby="pills-grid-tab">
+                            <div class="row custom-row-10">
+                                @foreach (var item in Model)
+                                {
+                                    <div class="col-xl-4 col-lg-4 col-md-6 col-sm-6 custom-col-10 justify-content-center">
+                                        <div class="product__wrapper mb-60">
+                                            <div class="product__thumb ">
+                                                <a href="/Product/EnProductDetail/@item.ProductId" class="w-img">
+                                                    <img src="~/assets/img/shop/product/@item.ImgPath" alt="product-img">
+                                                    <img class="product__thumb-2" src="~/assets/img/shop/product/@item.ImgPath" alt="product-img">
+                                                </a>
+                                                <div class="product__action transition-3">
+                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Add to Wishlist">
+                                                        <i class="fal fa-heart"></i>
+                                                    </a>
+                                                    <a href="#" data-toggle="tooltip" data-placement="top" title="Compare">
+                                                        <i class="fal fa-sliders-h"></i>
+                                                    </a>
+                                                    <a href="#" data-toggle="modal" data-target="#productModalId">
+                                                        <i class="fal fa-search"></i>
+                                                    </a>
+
+                                                </div>
+                                                <div class="product__sale">
+                                                    <span class="new">New </span>
+                                                    <span class="percent">Product</span>
+                                                </div>
+
+                                            </div>
+                                            <div class="product__content p-relative">
+                                                <div class="product__content-inner">
+                                                    <h4><a href="/Product/EnProductDetail/@item.ProductId">@item.ProductNameEng</a></h4>
+                                                    <div class="product__price transition-3">
+                                                        <span>Go Product</span>
+                                                        <span class="old-price">Go Product</span>
+                                                    </div>
+                                                </div>
+                                                <div class="add-cart p-absolute transition-3">
+                                                    <a href="/Product/EnProductDetail/@item.ProductId">Go Product</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            }
+        </div>
+ </div>
+
+</section>

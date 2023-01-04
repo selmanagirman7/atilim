@@ -1,0 +1,17 @@
+﻿@using Entity
+@model List<About>
+@{
+    ViewData["Title"] = "AboutEdit";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@foreach (var item in Model)
+{
+
+				<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
+				
+					<a class="dropdown-item" href="/Admin/AboutDelete/@item.AboutId"><i class="dw dw-delete-3"></i> Delete</a>
+				</div>
+		
+}
+

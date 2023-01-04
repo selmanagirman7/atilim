@@ -1,0 +1,285 @@
+﻿<!doctype html>
+<html class="no-js" lang="zxx">
+    @await Html.PartialAsync("HeaderPartial")
+
+<body>
+    <!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+    <!-- Add your site or application content here -->
+    <!-- prealoder area start -->
+    <div id="loading">
+        <div id="loading-center">
+            <div id="loading-center-absolute">
+                <div class="" id="first_object"><img src="~/assets/img/logo/logo.png"/></div>
+            </div>
+        </div>
+    </div>
+    <!-- prealoder area end -->
+    <!-- header area start -->
+    @await Html.PartialAsync("NavbarPartial")
+   
+    <!-- header area end -->
+    <!-- scroll up area start -->
+    <div class="scroll-up" id="scroll" style="display: none;">
+        <a href="javascript:void(0);"><i class="fas fa-level-up-alt"></i></a>
+    </div>
+    <!-- scroll up area end -->
+    <!-- search area start -->
+    @RenderBody()
+    <section class="header__search white-bg transition-3">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="header__search-inner text-center">
+                        <form action="#">
+                            <div class="header__search-btn">
+                                <a href="javascript:void(0);" class="header__search-btn-close"><i class="fal fa-times"></i></a>
+                            </div>
+                            <div class="header__search-header">
+                                <h3>Search</h3>
+                            </div>
+                            <div class="header__search-categories">
+                                <ul class="search-category">
+                                    <li><a href="shop.html">All Categories</a></li>
+                                    <li><a href="shop.html">Accessories</a></li>
+                                    <li><a href="shop.html">Chair</a></li>
+                                    <li><a href="shop.html">Tablet</a></li>
+                                    <li><a href="shop.html">Men</a></li>
+                                    <li><a href="shop.html">Women</a></li>
+
+                                </ul>
+                            </div>
+                            <div class="header__search-input p-relative">
+                                <input type="text" placeholder="Search for products... ">
+                                <button type="submit"><i class="far fa-search"></i></button>
+                            </div>
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="body-overlay transition-3"></div>
+    <!-- search area end -->
+    <!-- extra info area start -->
+    <section class="extra__info transition-3">
+        <div class="extra__info-inner">
+            <div class="extra__info-close text-right">
+                <a href="javascript:void(0);" class="extra__info-close-btn"><i class="fal fa-times"></i></a>
+            </div>
+            <!-- side-mobile-menu start -->
+            <nav class="side-mobile-menu d-block d-lg-none">
+                <ul id="mobile-menu-active">
+                    <li class="active ">
+                        <a href="/Home/Index">Anasayfa</a>
+                    </li>
+                    <li class="mega-menu ">
+                        <a href="/Product/Index">Ürünler</a>
+                        
+                    </li>
+                    <li class="">
+                        <a href="/About/Index">Hakkımızda</a>
+                     
+                    </li>
+                    <li class="">
+                        <a href="/Catalog/Index">Katalog</a>
+                       
+                    </li>
+                    <li><a href="/Contact/Index">İletişim</a></li>
+                </ul>
+            </nav>
+          
+        </div>
+    </section>
+    <div class="body-overlay transition-3"></div>
+
+
+    <main>
+ 
+        <div class="modal fade" id="productModalId" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered product-modal" role="document">
+                <div class="modal-content">
+                    <div class="product__modal-wrapper p-relative">
+                        <div class="product__modal-close p-absolute">
+                            <button data-dismiss="modal"><i class="fal fa-times"></i></button>
+                        </div>
+                        <div class="product__modal-inner">
+                            <div class="row">
+                                <div class="col-xl-5 col-lg-5 col-md-6 col-sm-12 col-12">
+                                    <div class="product__modal-box">
+                                        <div class="tab-content mb-20" id="nav-tabContent">
+                                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+                                                <div class="product__modal-img w-img">
+                                                    <img src="~/assets/img/shop/product/quick-view/quick-big-1.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                                                <div class="product__modal-img w-img">
+                                                    <img src="~/assets/img/shop/product/quick-view/quick-big-2.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                                                <div class="product__modal-img w-img">
+                                                    <img src="~/assets/img/shop/product/quick-view/quick-big-3.jpg" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <nav>
+                                            <div class="nav nav-tabs justify-content-between" id="nav-tab" role="tablist">
+                                                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">
+                                                    <div class="product__nav-img w-img">
+                                                        <img src="~/assets/img/shop/product/quick-view/quick-sm-1.jpg" alt="">
+                                                    </div>
+                                                </a>
+                                                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">
+                                                    <div class="product__nav-img w-img">
+                                                        <img src="~/assets/img/shop/product/quick-view/quick-sm-2.jpg" alt="">
+                                                    </div>
+                                                </a>
+                                                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">
+                                                    <div class="product__nav-img w-img">
+                                                        <img src="~/assets/img/shop/product/quick-view/quick-sm-3.jpg" alt="">
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </nav>
+                                    </div>
+                                </div>
+                                <div class="col-xl-7 col-lg-7 col-md-6 col-sm-12 col-12">
+                                    <div class="product__modal-content">
+                                        <h4><a href="product-details.html">Wooden container Bowl</a></h4>
+                                        <div class="rating rating-shop mb-15">
+                                            <ul>
+                                                <li><span><i class="fas fa-star"></i></span></li>
+                                                <li><span><i class="fas fa-star"></i></span></li>
+                                                <li><span><i class="fas fa-star"></i></span></li>
+                                                <li><span><i class="fas fa-star"></i></span></li>
+                                                <li><span><i class="fal fa-star"></i></span></li>
+                                            </ul>
+                                            <span class="rating-no ml-10">
+                                                3 rating(s)
+                                            </span>
+                                        </div>
+                                        <div class="product__price-2 mb-25">
+                                            <span>$96.00</span>
+                                            <span class="old-price">$96.00</span>
+                                        </div>
+                                        <div class="product__modal-des mb-30">
+                                            <p>Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram.</p>
+                                        </div>
+                                        <div class="product__modal-form">
+                                            <form action="#">
+                                                <div class="product__modal-input size mb-20">
+                                                    <label>Size <i class="fas fa-star-of-life"></i></label>
+                                                    <select>
+                                                        <option>- Please select -</option>
+                                                        <option> S</option>
+                                                        <option> M</option>
+                                                        <option> L</option>
+                                                        <option> XL</option>
+                                                        <option> XXL</option>
+                                                    </select>
+                                                </div>
+                                                <div class="product__modal-input color mb-20">
+                                                    <label>Color <i class="fas fa-star-of-life"></i></label>
+                                                    <select>
+                                                        <option>- Please select -</option>
+                                                        <option> Black</option>
+                                                        <option> Yellow</option>
+                                                        <option> Blue</option>
+                                                        <option> White</option>
+                                                        <option> Ocean Blue</option>
+                                                    </select>
+                                                </div>
+                                                <div class="product__modal-required mb-5">
+                                                    <span>Repuired Fiields *</span>
+                                                </div>
+                                                <div class="pro-quan-area d-lg-flex align-items-center">
+                                                    <div class="product-quantity-title">
+                                                        <label>Quantity</label>
+                                                    </div>
+                                                    <div class="product-quantity">
+                                                        <div class="cart-plus-minus"><input type="text" value="1"></div>
+                                                    </div>
+                                                    <div class="pro-cart-btn ml-20">
+                                                        <a href="#" class="os-btn os-btn-black os-btn-3 mr-10">+ Add to Cart</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- shop modal end -->
+    </main>
+
+    @await Html.PartialAsync("FooterPartial")
+    
+  
+    <!-- footer area end -->
+    <!-- JS here -->
+    <script data-cfasync="false" src="../../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script src="~/assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="~/assets/js/vendor/jquery-3.6.0.min.js"></script>
+    <script src="~/assets/js/vendor/waypoints.min.js"></script>
+    <script src="~/assets/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/js/metisMenu.min.js"></script>
+    <script src="~/assets/js/slick.min.js"></script>
+    <script src="~/assets/js/jquery.fancybox.min.js"></script>
+    <script src="~/assets/js/isotope.pkgd.min.js"></script>
+    <script src="~/assets/js/owl.carousel.min.js"></script>
+    <script src="~/assets/js/jquery-ui-slider-range.js"></script>
+    <script src="~/assets/js/ajax-form.js"></script>
+    <script src="~/assets/js/wow.min.js"></script>
+    <script src="~/assets/js/imagesloaded.pkgd.min.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+</html>
+
+           
+

@@ -1,0 +1,184 @@
+﻿@using Entity
+@model List<About>
+@{
+    ViewData["Title"] = "EnIndex";
+    Layout = "~/Views/Shared/EnLayout.cshtml";
+}
+<div class="scroll-up" id="scroll" style="display: none;">
+    <a href="javascript:void(0);"><i class="fas fa-level-up-alt"></i></a>
+</div>
+<!-- scroll up area end -->
+<!-- search area start -->
+<section class="header__search white-bg transition-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="header__search-inner text-center">
+                    <form action="#">
+                        <div class="header__search-btn">
+                            <a href="javascript:void(0);" class="header__search-btn-close"><i class="fal fa-times"></i></a>
+                        </div>
+                        <div class="header__search-header">
+                            <h3>Search</h3>
+                        </div>
+                        <div class="header__search-categories">
+                            <ul class="search-category">
+                                <li><a href="shop.html">All Categories</a></li>
+                                <li><a href="shop.html">Accessories</a></li>
+                                <li><a href="shop.html">Chair</a></li>
+                                <li><a href="shop.html">Tablet</a></li>
+                                <li><a href="shop.html">Men</a></li>
+                                <li><a href="shop.html">Women</a></li>
+
+                            </ul>
+                        </div>
+                        <div class="header__search-input p-relative">
+                            <input type="text" placeholder="Search for products... ">
+                            <button type="submit"><i class="far fa-search"></i></button>
+                        </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="body-overlay transition-3"></div>
+<!-- search area end -->
+<!-- extra info area start -->
+<section class="extra__info transition-3">
+    <div class="extra__info-inner">
+        <div class="extra__info-close text-right">
+            <a href="javascript:void(0);" class="extra__info-close-btn"><i class="fal fa-times"></i></a>
+        </div>
+        <!-- side-mobile-menu start -->
+        <nav class="side-mobile-menu d-block d-lg-none">
+            <ul id="mobile-menu-active">
+                <li class="active">
+                    <a href="/Home/Index">Ansayfa</a>
+                    
+                </li>
+                <li class="mega-menu has-dropdown">
+                    <a href="/Product/Index">Ürünler</a>
+                    
+                </li>
+                <li class="has-dropdown">
+                    <a href="/About/Index">Hakkımızda</a>
+                   
+                </li>
+                <li class="has-dropdown">
+                    <a href="/Catalog/Index">Katalog</a>
+                    
+                </li>
+                <li><a href="/Contact/Index">İletişim</a></li>
+            </ul>
+        </nav>
+        <!-- side-mobile-menu end -->
+    </div>
+</section>
+<div class="body-overlay transition-3"></div>
+<!-- extra info area end -->
+
+<main>
+
+    <!-- page title area start -->
+    <section class="page__title p-relative d-flex align-items-center" data-background="assets/img/page-title/page-title-1.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="page__title-inner text-center">
+                        <h1>About</h1>
+                        <div class="page__title-breadcrumb">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb justify-content-center">
+                                    <li class="breadcrumb-item"><a href="/Home/EnIndex">Home</a></li>
+                                    <li class="breadcrumb-item active" aria-current="page"> About</li>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- page title area end -->
+    <!-- blog area start -->
+   
+       
+   
+    <section class="blog__area pt-100 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-8 col-lg-8">
+                    @foreach (var item in Model)
+                    {
+                    <div class="blog__wrapper">
+                        <div class="blog__item blog__border-bottom mb-60 pb-60">
+
+                            <div class="blog__content">
+                                <h4 class="blog__title"><a href="/About/EnIndex">ABOUT US</a></h4>
+                                <div class="blog__meta">
+                                    <span>By <a href="/Home/EnIndex">Atılım Alüminyum</a></span>
+
+                                </div>
+                                <p>
+                                        @item.AboutDescriptionEng
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="blog__item blog__border-bottom mb-60 pb-60">
+
+                            <div class="blog__content">
+                                <h4 class="blog__title"><a href="/About/EnIndex">OUR VISION</a></h4>
+                                <div class="blog__meta">
+                                    <span>By <a href="/Home/EnIndex">Atılım Alüminyum</a></span>
+
+                                </div>
+                                <p>
+
+                                  @item.VissionEng
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="blog__item blog__border-bottom mb-60 pb-60">
+
+                            <div class="blog__content">
+                                <h4 class="blog__title"><a href="blog-details.html"> OUR MISSION</a></h4>
+                                <div class="blog__meta">
+                                    <span>By <a href="/Home/EnIndex">Atılım Alüminyum</a></span>
+
+                                </div>
+                                <p>
+
+                                    @item.VissionEng
+                                </p>
+
+                            </div>
+                        </div>
+                        <div class="blog__item blog__border-bottom mb-30 pb-60">
+
+                            <div class="blog__content">
+                                <h4 class="blog__title"><a href="/Home/EnIndex">OUR QUALITY POLICY</a></h4>
+                                <div class="blog__meta">
+                                    <span>By <a href="/Home/EnIndex">Atılım Alüminyum</a></span>
+
+                                </div>
+                                <p>
+
+                                    @item.ValueEng
+                                </p>
+
+                            </div>
+                        </div>
+
+                        </div>}
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- blog area end -->
+</main>
